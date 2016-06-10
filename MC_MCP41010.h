@@ -34,7 +34,7 @@ public:
   // 0 - 255
   void  Write(uint8_t Value);
   // 0 - 10Khom
-  void  SetResitor(uint16_t Value);
+  void  SetResistor(uint16_t Value);
   void  Reset();
   void  End();
 };
