@@ -69,7 +69,7 @@ void MC_MCP41010::Write(uint8_t Value)
 }
 
 // 0 - 10Khom
-void MC_MCP41010::SetResitor(uint16_t Value)
+void MC_MCP41010::SetResistor(uint16_t Value)
 {
   if (Value>10000) Value = MAX_RESISTOR_LEVEL;
   uint8_t newValue = map (Value, 0,10000, 0,255);
