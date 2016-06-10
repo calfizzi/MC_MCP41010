@@ -10,10 +10,10 @@
 
                 Methods:
                   Begin       ( void )            Use it when you want start SPI communication
-                  Write       ( uint8_t Value)    Set value from 0 up to 255   (variation between 0-10KoHm)
-                  SetResistor ( uint16_t Value)   Set value from 0 up to 10000 (10Khom)
-                  Reset       ( void )
-                  End         ( void )
+                  Write       ( uint8_t Value  )  Set value from 0 up to 255   (variation between 0-10KoHm)
+                  SetResistor ( uint16_t Value )  Set value from 0 up to 10000 (10Khom)
+                  Teset       ( void )            The method Shutdowns and restart the MCP41010
+                  End         ( void )            Use it when you want stop SPI communication
 
 *************************************************************************************************************************/
 
