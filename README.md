@@ -12,5 +12,5 @@ Download and try the class MC_MCP41010 to manage MCP41010 digital SPI 10KOhm pot
         Begin       ( void )            Use it when you want start SPI communication
         Write       ( uint8_t Value)    Set value from 0 up to 255   (variation between 0-10KoHm)
         SetResistor ( uint16_t Value)   Set value from 0 up to 10000 (10Khom)
-        Reset       ( void )
-        End         ( void )
+        Reset       ( void )            The method Shutdowns and restart the MCP41010
+        End         ( void )            Use it when you want stop SPI communication
