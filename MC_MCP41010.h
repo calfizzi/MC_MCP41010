@@ -1,3 +1,22 @@
+/************************************************************************************************************************
+  File type   : Arduino Library
+  Developed By: Mario Calfizzi
+
+  Description : This is the core MCP41010 library to managge the MCP41010 digital SPI 10KOhm potentiometer.
+                
+                Constructors:
+                  MC_MCP41010 (uint8_t cs)
+                  MC_MCP41010 (uint8_t cs, uint8_t clk, uint8_t mosi)
+
+                Methods:
+                  Begin       ( void )            Use it when you want start SPI communication
+                  Write       ( uint8_t Value)    Set value from 0 up to 255   (variation between 0-10KoHm)
+                  SetResistor ( uint16_t Value)   Set value from 0 up to 10000 (10Khom)
+                  Reset       ( void )
+                  End         ( void )
+
+*************************************************************************************************************************/
+
 #ifndef MC_MCP41010_h
 #define MC_MCP41010_h
 #include <Arduino.h>
@@ -21,22 +40,22 @@
 
 class MC_MCP41010
 {
-public:
+private:
   uint8_t _cs;
   uint8_t _clk;
   uint8_t _mosi;
   bool    _use_spi;
-  void    _writeBytes (uint8_t *data, uint8_t dataSize);
+  void    _writeBytes   ( uint8_t *data, uint8_t dataSize);
 public:
-        MC_MCP41010(uint8_t cs);
-        MC_MCP41010(uint8_t cs, uint8_t clk, uint8_t mosi);
-  void  Begin();
+          MC_MCP41010   ( uint8_t cs);
+          MC_MCP41010   ( uint8_t cs, uint8_t clk, uint8_t mosi);
+  void    Begin         ( void );
   // 0 - 255
-  void  Write(uint8_t Value);
+  void    Write         ( uint8_t Value);
   // 0 - 10Khom
-  void  SetResistor(uint16_t Value);
-  void  Reset();
-  void  End();
+  void    SetResistor   ( uint16_t Value);
+  void    Reset         ( void );
+  void    End           ( void );
 };
 
 #endif
