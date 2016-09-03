@@ -2,7 +2,7 @@
   File type   : Arduino Library
   Developed By: Mario Calfizzi
 
-  Description : This is the core MCP41010 library to managge the MCP41010 digital SPI 10KOhm potentiometer.
+  Description : This is the core MCP41010 library to manage the MCP41010 digital SPI 10KOhm potentiometer.
 
 *************************************************************************************************************************/
 #include "MC_MCP41010.h"
